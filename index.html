@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web Scraping Full Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #fcfbf7;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ebe6d9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .accordion-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #d1ccc0;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            outline: none;
+            text-align: right;
+        }
+
+        .question-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #6b7a54;
+        }
+
+        .icon { font-size: 28px; color: #6b7a54; font-weight: bold; }
+
+        .accordion-content {
+            display: none;
+            padding: 25px;
+            border-top: 1px solid #eee;
+            line-height: 2.5;
+            font-size: 19px;
+            text-align: justify;
+        }
+
+        .audio-wrapper {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f0ede4;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .media-btn {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #6b7a54;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .media-btn:hover { transform: scale(1.1); }
+
+        iframe {
+            width: 100%;
+            height: 252px;
+            border-radius: 10px;
+            display: none; /* شروع میں چھپا ہوا */
+        }
+
+        strong { color: #2c3e50; }
+        h2 { color: #6b7a54; font-size: 24px; border-bottom: 1px solid #d1ccc0; padding-bottom: 10px; }
+        
+        .divider { height: 2px; background: #d1ccc0; margin: 20px 0; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">ویب اسکریپنگ اور اے آئی ایجنٹس گائیڈ</h1>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <span class="question-text">کونسا اے آئی جو ویب اسکریپنگ کر سکتا ہے؟</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+            ویب اسکریپنگ (Web Scraping) کے لیے آج کل بہت سے طاقتور اے آئی (AI) ٹولز دستیاب ہیں۔ آپ کی ضرورت کے لحاظ سے میں نے انہیں تین اہم کیٹیگریز میں تقسیم کیا ہے:
+            <br><br>
+            <strong>1. کوڈنگ کے ماہرین کے لیے (Developers)</strong><br>
+            اگر آپ پروگرامنگ جانتے ہیں تو یہ ٹولز بہترین ہیں:
+            <br><strong>ChatGPT (OpenAI):</strong> یہ براہ راست ویب سائٹ اسکریپ نہیں کرتا لیکن اگر آپ اسے یو آر ایل (URL) دیں تو یہ Python یا BeautifulSoup کے لیے بہترین کوڈ لکھ کر دے سکتا ہے۔
+            <br><strong>Perplexity AI:</strong> یہ ویب سائٹ کو ریڈ کر کے ڈیٹا کا خلاصہ (Summary) نکالنے میں بہت تیز ہے۔
+            <br><strong>Claude 3.5 Sonnet:</strong> پیچیدہ اسکرپٹس اور ڈیٹا پارسنگ (Data Parsing) کے لیے اس کا کوڈ بہت ہی درست ہوتا ہے۔
+            <br><br>
+            <strong>2. بغیر کوڈنگ کے ٹولز (No-Code AI Scrapers)</strong><br>
+            اگر آپ کو کوڈنگ نہیں آتی تو یہ ٹولز آپ کا کام آسان کر دیں گے:
+            <br><strong>Browse.ai:</strong> یہ ایک بہت ہی مشہور ٹول ہے جو کسی بھی ویب سائٹ کو مانیٹر کر سکتا ہے اور ڈیٹا نکال کر گوگل شیٹس (Google Sheets) میں ڈال سکتا ہے۔
+            <br><strong>Bardeen.ai:</strong> یہ ایک براؤزر ایکسٹینشن ہے جو اے آئی کی مدد سے ویب سائٹس سے ڈیٹا نکال کر آپ کے ورک فلو (Workflow) کو خودکار (Automate) بنا دیتی ہے۔
+            <br><strong>Octoparse:</strong> اس میں اب اے آئی فیچرز آ گئے ہیں جو خود بخود ویب سائٹ کا ڈھانچہ پہچان کر ڈیٹا نکال لیتے ہیں۔
+            <br><br>
+            <strong>3. ڈیٹا ایکسٹریکشن ای پی آئی (Data Extraction APIs)</strong><br>
+            اگر آپ کو بڑے پیمانے پر ڈیٹا چاہیے:
+            <br><strong>Apify:</strong> یہ خاص طور پر اسکریپنگ کے لیے بنایا گیا پلیٹ فارم ہے جس میں انسٹاگرام، فیس بک اور ایمیزون جیسی سائٹس کے لیے بنے بنائے "Actors" موجود ہیں۔
+            <br><strong>Firecrawl:</strong> یہ خاص طور پر LLMs (جیسے ChatGPT) کے لیے ویب سائٹس کو صاف ستھرے مارک ڈاؤن (Markdown) فارمیٹ میں تبدیل کرنے کے لیے بہترین ہے۔
+            <br><br>
+            <strong>اہم بات:</strong> ویب اسکریپنگ کرتے وقت ہمیشہ ویب سائٹ کی Terms of Service اور Robots.txt فائل کو ضرور چیک کریں تاکہ آپ کسی قانونی مشکل میں نہ پڑیں۔
+
+            <div class="audio-wrapper">
+                <button class="media-btn" onclick="toggleAudio(this)">▶</button>
+                <iframe src="https://audiomack.com//embed/7leezong/song/69935798a9606" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <span class="question-text">کیا نئے آئے براؤزر ایجنٹ ویب سکریپنگ کر سکتے ہیں؟</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+            جی ہاں، بالکل! براؤزر ایجنٹس (Browser Agents) ویب اسکریپنگ کی دنیا میں ایک بہت بڑی تبدیلی لے کر آئے ہیں۔ روایتی اسکریپنگ ٹولز کے برعکس، یہ ایجنٹس صرف ڈیٹا "نکالتے" نہیں ہیں بلکہ ایک انسان کی طرح ویب سائٹ کے ساتھ بات چیت (Interact) بھی کر سکتے ہیں۔
+            <br><br>
+            <strong>براؤزر ایجنٹس روایتی اسکریپنگ سے کیسے مختلف ہیں؟</strong><br>
+            عام اسکریپرز (جیسے BeautifulSoup) صرف اس پیج کا ڈیٹا پڑھتے ہیں جو انہیں نظر آتا ہے۔ لیکن نئے AI Agents درج ذیل کام کر سکتے ہیں:
+            <ul>
+                <li><strong>لاگ ان کرنا:</strong> وہ خود یوزر نیم اور پاس ورڈ ڈال کر لاگ ان کر سکتے ہیں۔</li>
+                <li><strong>نیویگیشن:</strong> وہ بٹن پر کلک کر سکتے ہیں، مینیو کھول سکتے ہیں اور اسکرول (Scroll) کر سکتے ہیں۔</li>
+                <li><strong>پیچیدہ فارمز:</strong> وہ سرچ بار میں کچھ لکھ کر رزلٹ نکال سکتے ہیں۔</li>
+                <li><strong>انسانی رویہ:</strong> یہ ایجنٹس اس طرح کام کرتے ہیں کہ ویب سائٹس انہیں "بوٹ" سمجھ کر بلاک نہیں کرتیں۔</li>
+            </ul>
+
+            <h2>بہترین AI براؤزر ایجنٹس اور فریم ورکس</h2>
+            <strong>Skyvern:</strong> یہ ایک اوپن سورس ایجنٹ ہے جو براؤزر کو کنٹرول کرنے کے لیے کمپیوٹر ویژن اور LLMs کا استعمال کرتا ہے۔ اسے صرف یہ بتانا پڑتا ہے کہ "فلاں ویب سائٹ سے رسید ڈاؤن لوڈ کر لو"۔
+            <br><strong>MultiOn:</strong> یہ ایک بہت طاقتور AI ایجنٹ ہے جو آپ کے براؤزر کے اندر کام کرتا ہے۔ یہ پیچیدہ کاموں کے لیے بہترین ہے۔
+            <br><strong>Operator:</strong> حال ہی میں انتھروپک نے "Computer Use" کا فیچر متعارف کرایا ہے جو ویب سائٹ سے ڈیٹا اکٹھا کر سکتا ہے۔
+            <br><strong>LaVague:</strong> یہ قدرتی زبان کو سیلینیم یا پلے رائٹ کے کوڈ میں بدل دیتا ہے۔
+
+            <div class="audio-wrapper">
+                <button class="media-btn" onclick="toggleAudio(this)">▶</button>
+                <iframe src="https://audiomack.com//embed/7leezong/song/699353a4168b2" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <span class="question-text">ایجنٹس کے استعمال کے فائدے اور حدود</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+            <strong>ان کے استعمال کے فائدے:</strong><br>
+            <strong>کوئی فکسڈ اسٹرکچر نہیں چاہیے:</strong> اگر ویب سائٹ کا ڈیزائن بدل بھی جائے، تو اے آئی ایجنٹ اسے سمجھ لیتا ہے اور اسکریپنگ جاری رکھتا ہے۔
+            <br><strong>انسانی زبان میں کمانڈ:</strong> آپ کو کوڈ لکھنے کی ضرورت نہیں، بس یہ کہنا کافی ہے کہ "ایمیزون سے ڈیٹا نکال لو"۔
+            <br><br>
+            <strong>کیا کوئی حد (Limitations) بھی ہے؟</strong><br>
+            <strong>قیمت:</strong> یہ عام اسکریپنگ کے مقابلے میں مہنگے ہوتے ہیں کیونکہ ہر کلک پر LLM کا استعمال ہوتا ہے۔
+            <br><strong>رفتار:</strong> یہ تھوڑے سست ہو سکتے ہیں کیونکہ یہ بالکل انسان کی طرح پیج لوڈ ہونے کا انتظار کرتے ہیں۔
+
+            <div class="audio-wrapper">
+                <button class="media-btn" onclick="toggleAudio(this)">▶</button>
+                <iframe src="https://audiomack.com//embed/7leezong/song/6993548d1a41c" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <span class="question-text">سوشل میڈیا سے تصویروں کے لنکس نکالنا</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+            سوشل میڈیا ویب سائٹس سے ڈیٹا اور تصویروں کے لنکس نکالنا روایتی اسکریپرز کے لیے مشکل ہوتا ہے کیونکہ یہ سائٹس JavaScript پر چلتی ہیں۔ براؤزر ایجنٹس اس کام کے لیے بہترین ہیں کیونکہ وہ "Lazy Loading" کا مسئلہ حل کر دیتے ہیں۔
+            <br><br>
+            <strong>بہترین طریقے:</strong><br>
+            <strong>1. کلاؤڈ بیسڈ ایجنٹس:</strong> Browse.ai اور PhantomBuster بہترین ہیں۔ یہ تصاویر کے یو آر ایل نکال کر ایکسل فائل میں محفوظ کر دیتے ہیں۔
+            <br><strong>2. کوڈنگ کے ذریعے:</strong> Python کے ساتھ AI ایجنٹ (جیسے Crawl4AI) کا استعمال کریں۔
+            <br><br>
+            <strong>احتیاطی تدابیر:</strong> Rate Limiting کا خیال رکھیں، پراکسی (Proxies) استعمال کریں، اور سیشن کوکیز کا استعمال کریں۔
+
+            <div class="audio-wrapper">
+                <button class="media-btn" onclick="toggleAudio(this)">▶</button>
+                <iframe src="https://audiomack.com//embed/7leezong/song/stremio-4" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <span class="question-text">Browse.ai اور Apify: ڈیٹا نکالنے کا طریقہ</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+            <strong>1. Browse.ai (بغیر کوڈنگ کے):</strong><br>
+            سٹیپ 1: اکاؤنٹ اور ایکسٹینشن بنائیں۔ سٹیپ 2: روبوٹ کو ٹرین کریں۔ سٹیپ 3: ڈیٹا منتخب کریں (Capture List)۔ سٹیپ 4: امیج یو آر ایل سلیکٹ کریں۔ سٹیپ 5: اسکرولنگ سیٹ کریں۔
+            <br><br>
+            <strong>2. Apify (زیادہ ڈیٹا کے لیے):</strong><br>
+            سٹیپ 1: اسٹور سے ایکٹر (Actor) منتخب کریں۔ سٹیپ 2: ان پٹ سیٹ کریں۔ سٹیپ 3: پراکسی کا استعمال کریں۔ سٹیپ 4: رن اور ایکسپورٹ کریں۔
+            <br><br>
+            <strong>درست ڈیٹا کے لیے 3 ٹپس:</strong> لوڈ ٹائم (Wait Time) کا خیال رکھیں، امیج کوالٹی (High Res URL) چیک کریں، اور لاگ ان سے بچیں۔
+
+            <div class="audio-wrapper">
+                <button class="media-btn" onclick="toggleAudio(this)">▶</button>
+                <iframe src="https://audiomack.com//embed/7leezong/song/69935667b1016" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // آڈیو کنٹرول
+    function toggleAudio(btn) {
+        const iframe = btn.nextElementSibling;
+        const allIframes = document.querySelectorAll('iframe');
+        const allBtns = document.querySelectorAll('.media-btn');
+
+        if (iframe.style.display === "block") {
+            iframe.style.display = "none";
+            btn.textContent = "▶";
+        } else {
+            // پہلے سب بند کریں
+            allIframes.forEach(f => f.style.display = 'none');
+            allBtns.forEach(b => b.textContent = '▶');
+            
+            iframe.style.display = "block";
+            btn.textContent = "⏸";
+        }
+    }
+
+    // ایکورڈین کنٹرول (ایک وقت میں ایک)
+    const headers = document.querySelectorAll(".accordion-header");
+    headers.forEach(header => {
+        header.addEventListener("click", function() {
+            const content = this.nextElementSibling;
+            const isOpen = content.style.display === "block";
+
+            // تمام مواد بند کریں
+            document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+            document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
+
+            // مطلوبہ کھولیں
+            if (!isOpen) {
+                content.style.display = "block";
+                this.querySelector(".icon").textContent = "−";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
